@@ -12,4 +12,5 @@ along with clean and self-documenting solutions in code.
 | Problem | Status | Code           |
 | ------- | ------ |----------------|
 | 1       | Done   | [p1.py](p1.py) |
+| 2       | Done   | [p2.py](p2.py) |
 

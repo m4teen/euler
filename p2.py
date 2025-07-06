@@ -26,4 +26,3 @@ def fib_summer(m):
 
 
 print(fib_summer(4000000))
-
