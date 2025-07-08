@@ -1,3 +1,9 @@
+"""
+
+fib_sum_memo is a memoised, recursion-based algorithm.
+
+"""
+
 memo = {0:0, 1:1}
 
 def f(n):
@@ -21,7 +27,7 @@ def fib_sum_memo(m):
 
 """
 
-fib_sum_memo is a memoised, recursion-based algorithm.
+fib_sum is a recursion-free algorithm
 
 """
 
@@ -34,9 +40,3 @@ def fib_sum(m):
             total += a
         a, b = b, a + b
     return total
-
-"""
-
-fib_sum is a recursion-free algorithm
-
-"""
