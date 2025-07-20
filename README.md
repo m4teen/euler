@@ -13,4 +13,5 @@ along with clean and self-documenting solutions in code.
 | ------- | ------ |----------------|
 | 1       | Done   | [p1.py](p1.py) |
 | 2       | Done   | [p2.py](p2.py) |
-| 3       |        |                |
+| 3       | Done   | [p3.py](p3.py) |
+|   4     | WIP    |                |
