@@ -1,19 +1,85 @@
+def prime_sieve(n):
+    # Initialise a dictionary to store primes, with key 0 mapped to the first prime (2)
+    primes = {0: 2}
+    count = 1  # Counter to assign keys to new primes
+    
+    # Loop through numbers from 2 to n inclusive
+    for i in range(2, n + 1):
+        # Check if i is divisible by any known prime
+        if any(i % p == 0 for p in primes.values()):
+            continue  # Not a prime, skip
+        else:
+            primes[count] = i  # Store the new prime
+            count += 1
+    
+    # Initialise current_max with the first prime
+    current_max = next(iter(primes.values()))
+    
+    # Find the largest prime in the sieve that divides n
+    for j in primes.values():
+        if n % j == 0 and j > current_max:
+            current_max = j
+        else:
+            continue
+
+    return current_max
+
+
+"""
+This was my first attempt, it was a direct representation of the mathematical problem in code. 
+It generates all primes up to n using a dictionary and tests each integer 
+for primality by dividing it by all previously found primes. Once the sieve is built, it 
+searches for the largest prime factor of n by checking which primes divide n.
+
+While this approach is mathematically correct, it is extremely inefficient for large n. 
+It involves checking divisibility for every integer up to n, 
+leading to a worst-case time complexity of approximately O(n^2 / log n), due to 
+the increasing number of divisibility checks for each new candidate. Space complexity 
+is also high, as it stores all primes up to n.
+
+In short, this brute-force style sieve is entirely unsuited for large inputs
+and would take millions of years to complete  inputs such as the one that was required for the problem.
+"""
+
+
 def largest_prime_factor(n):
+    # Divide out all factors of 2 first
     while n % 2 == 0:
         n //= 2
         largest = 2
     
-    # Now n is odd, try only odd factors
+    # Now n is odd, try only odd factors starting from 3
     i = 3
     while i * i <= n:
+        # While i divides n, divide it out completely
         while n % i == 0:
             n //= i
             largest = i
-        i += 2
+        i += 2  # Increment to next odd number
 
-    # If anything's left, it's prime
+    # If any factor remains, it must be prime and the largest
     if n > 1:
         largest = n
 
     return largest
+
+
+"""
+This optimised approach avoids generating a full list of primes. Instead, it performs 
+trial division: starting from 2, it repeatedly divides out prime factors from n, reducing 
+n until all smaller factors are removed. After 2 is handled, it only checks odd numbers, 
+since all even numbers would already be factored out. After removing the even numbers, 
+the function implements a greedy, compressed factor tree to quickly 
+find the prime factors. 
+
+
+The key optimisation is that it only checks divisors up to √n, based on the fundamental 
+property that any non-prime must have a factor ≤ √n. Time complexity is reduced to O(√n), 
+and space complexity is O(1). This makes it scalable even for very large 
+inputs like 600,851,475,143, completing in under a second.
+
+
+"""
+
+# Example usage
 print(largest_prime_factor(600851475143))
