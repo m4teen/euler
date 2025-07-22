@@ -26,19 +26,17 @@ def prime_sieve(n):
 
 
 """
+
 This was my first attempt, it was a direct representation of the mathematical problem in code. 
 It generates all primes up to n using a dictionary and tests each integer 
 for primality by dividing it by all previously found primes. Once the sieve is built, it 
 searches for the largest prime factor of n by checking which primes divide n.
 
-While this approach is mathematically correct, it is extremely inefficient for large n. 
-It involves checking divisibility for every integer up to n, 
-leading to a worst-case time complexity of approximately O(n^2 / log n), due to 
-the increasing number of divisibility checks for each new candidate. Space complexity 
-is also high, as it stores all primes up to n.
+Time complexity: O(n^2 / log n), due to checking divisibility for every integer up to n
+against an increasingly large list of previously found primes.
 
-In short, this brute-force style sieve is entirely unsuited for large inputs
-and would take millions of years to complete  inputs such as the one that was required for the problem.
+Space complexity: O(n / log n), since it stores all primes up to n.
+
 """
 
 
@@ -65,6 +63,7 @@ def largest_prime_factor(n):
 
 
 """
+
 This optimised approach avoids generating a full list of primes. Instead, it performs 
 trial division: starting from 2, it repeatedly divides out prime factors from n, reducing 
 n until all smaller factors are removed. After 2 is handled, it only checks odd numbers, 
@@ -73,10 +72,10 @@ the function implements a greedy, compressed factor tree to quickly
 find the prime factors. 
 
 
-The key optimisation is that it only checks divisors up to √n, based on the fundamental 
-property that any non-prime must have a factor ≤ √n. Time complexity is reduced to O(√n), 
-and space complexity is O(1). This makes it scalable even for very large 
-inputs like 600,851,475,143, completing in under a second.
+Time complexity: O(√n), since only divisors up to the square root of n are tested,
+and each factor is divided out completely when located.
+
+Space complexity: O(1), as it uses only a fixed number of integer variables.
 
 
 """
