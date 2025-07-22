@@ -1,5 +1,5 @@
 def prime_sieve(n):
-    # Initialise a dictionary to store primes, with key 0 mapped to the first prime (2)
+    # Initialise a dictionary to store primes, with key 0 mapped to the first prime i.e 2
     primes = {0: 2}
     count = 1  # Counter to assign keys to new primes
     
