@@ -15,3 +15,4 @@ along with clean and self-documenting solutions in code.
 | 2       | Done   | [p2.py](p2.py) |
 | 3       | Done   | [p3.py](p3.py) |
 | 4       | Done   | [p4.py](p4.py) |
+| 5       | Done   | [p5.py](p5.py) |
