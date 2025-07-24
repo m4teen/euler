@@ -1,3 +1,14 @@
+"""
+
+The function smallest_multiple calculates the smallest positive number that is evenly divisible.
+by all integers from 1 to n using the least common multiple (LCM) of the range.
+
+Time complexity: O(n (log n) * log (log n)) due to repeated LCM via prime factorisation internally.
+Space complexity: O(1) since no additional space used beyond constant-size variables.
+
+"""
+
+
 import math
 
 def smallest_multiple(n):
@@ -12,13 +23,3 @@ def smallest_multiple(n):
 
 # Print the smallest number divisible by all integers from 1 to 20
 print(smallest_multiple(20))
-
-"""
-
-This calculates the smallest positive number that is evenly divisible.
-by all integers from 1 to n, using the least common multiple (LCM) of the range.
-
-Time complexity: O(n (log n) *log (log n)) due to repeated LCM via prime factorisation internally.
-Space complexity: O(1) since no additional space used beyond constant-size variables.
-
-"""
