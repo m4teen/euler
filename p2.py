@@ -1,3 +1,17 @@
+"""
+
+The function fib_sum_memo is a recursive, memoised solution to the problem of summing even Fibonacci
+numbers up to a limit m. It implements memoisation to reduce recomputation
+of the Fibonacci numbers, which achieves linear time in theory. However, it makes multiple
+calls to f(n) in each loop iteration, leading to redundant lookups. The approach is
+a brute-force one born out of trying to understand the problem.
+
+Time complexity: Due to repeated f(n) calls per iteration, runtime is around O(n log n)).
+
+Space complexity: O(n), due to the memo dictionary storing all Fibonacci numbers up to f(n).
+
+"""
+
 # Initialise a memoisation dictionary with base Fibonacci values
 memo = {0: 0, 1: 1}
 
@@ -27,15 +41,14 @@ def fib_sum_memo(m):
 
 """
 
-fib_sum_memo is a recursive, memoised solution to the problem of summing even Fibonacci
-numbers up to a limit m. It implements memoisation to reduce recomputation
-of the Fibonacci numbers, which achieves linear time in theory. However, it makes multiple
-calls to f(n) in each loop iteration, leading to redundant lookups. The approach is
-a brute-force one born out of trying to understand the problem.
+The function fib_sum is an iterative, recursion-free solution that uses constant space and runs in linear time.
+It avoids memoisation, lists, and recursion entirely, making it well-suited
+to large inputs. It is less easy to visualise but far superior
+in performance and memory efficiency to fib_sum_memo.
 
-Time complexity: Due to repeated f(n) calls per iteration, runtime is around O(n log n)).
+Time complexity: O(n), where n is the number of Fibonacci numbers <= m.
 
-Space complexity: O(n), due to the memo dictionary storing all Fibonacci numbers up to f(n).
+Space complexity: O(1), since it always uses a fixed number of variables
 
 """
 
@@ -53,15 +66,3 @@ def fib_sum(m):
     return total        # Return the sum of even Fibonacci numbers <= m
 
 
-"""
-
-fib_sum is an iterative, recursion-free solution that uses constant space and runs in linear time.
-It avoids memoisation, lists, and recursion entirely, making it well-suited
-to large inputs. It is less easy to visualise but far superior
-in performance and memory efficiency to fib_sum_memo.
-
-Time complexity: O(n), where n is the number of Fibonacci numbers <= m.
-
-Space complexity: O(1), since it always uses a fixed number of variables
-
-"""
