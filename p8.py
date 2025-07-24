@@ -22,24 +22,13 @@ number_string = ("73167176531330624919225119674426574742355349194934"
     "05886116467109405077541002256983155200055935729725"
     "71636269561882670428252483600823257530420752963450")
 
+
 # Preprocess: Convert the string to a list of integers, avoiding repeated casting in the loop
 number = [int(number_string[i]) for i in range(len(number_string))]
 
-def trawler(n):
-    biggest = 0  # Variable to store the maximum product found
-    for i in range(0, int(len(number) - n)):  # Slide a window of size n across the number list
-        product = math.prod([number[x] for x in range(i, i + n)])  # Compute product of n digits
-        if product > biggest:
-            biggest = product  # Update max if new product is bigger
-        else:
-            continue  # Otherwise, keep going
-    return biggest
-
-print(trawler(13))  # Find and print the maximum product of 13 adjacent digits
-
 """
 
-This sliding window solves the problem of finding the largest product of n adjacent digits
+trawler solves the problem of finding the largest product of n adjacent digits
 in a long digit string. The first implementation computed the product in each iteration
 by converting each character to an integer inside the loop. This was optimised by converting
 the entire digit string into a list of integers before entering the loop, 
@@ -60,3 +49,16 @@ Space complexity:
 O(k), where k is the number of digits stored in the preprocessed list.
 
 """
+
+
+def trawler(n):
+    biggest = 0  # Variable to store the maximum product found
+    for i in range(0, int(len(number) - n)):  # Slide a window of size n across the number list
+        product = math.prod([number[x] for x in range(i, i + n)])  # Compute product of n digits
+        if product > biggest:
+            biggest = product  # Update max if new product is bigger
+        else:
+            continue  # Otherwise, keep going
+    return biggest
+
+print(trawler(13))  # Find and print the maximum product of 13 adjacent digits
