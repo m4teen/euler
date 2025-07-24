@@ -1,3 +1,25 @@
+"""
+This script computes the difference between the square of the sum and 
+the sum of the squares for the first n natural numbers. 
+
+The function sum_of_squares uses the mathematical formula for the finite sum of squares, which can easily be proven 
+by induction, is used. This greatly simplifies the sum_of_squares which 
+is the trickier of the two functions to define. An alternative implementation 
+which does not rely on mathematical elegance is included as sum_of_squares-alt using a list 
+comprehension and manual summation, though it is much less efficient.
+
+Time complexity (using sum_of_squares): O(n) due to sum(range(...)) in square_of_sum.
+Time complexity (using sum_of_squares_alt): O(n) due to explicit iteration and squaring.
+
+Space complexity (using sum_of_squares): O(1) as no data structures are created or stored whose 
+size scales with n.
+Space complexity (using sum_of_squares_alt): O(n) due to list of squares created in memory.
+
+"""
+
+
+
+
 def sum_of_squares(n):
     # Uses the closed-form formula for sum of squares: 1^2 + 2^2 + ... + n^2
     return 1/6 * n * (n + 1) * (2 * n + 1)
@@ -18,22 +40,4 @@ def difference(n):
 
 # Prints the result for n = 100
 print(difference(100))
-
-
-"""
-
-Here the formula for the finite sum of squares, which can easily be proven 
-by induction, is used. This greatly simplifies the sum_of_squares which 
-is the trickier of the two functions to define. An alternative implementation 
-which does not rely on mathematical elegance is included using a list 
-comprehension and manual summation, though it is much less efficient.
-
-Time complexity (using sum_of_squares): O(n) due to sum(range(...)) in square_of_sum.
-Time complexity (using sum_of_squares_alt): O(n) due to explicit iteration and squaring.
-
-Space complexity (using sum_of_squares): O(1) as no data structures are created or stored whose 
-size scales with n.
-Space complexity (using sum_of_squares_alt): O(n) due to list of squares created in memory.
-
-"""
 
