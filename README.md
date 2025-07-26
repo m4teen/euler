@@ -19,4 +19,4 @@ along with clean and self-documenting solutions in code.
 | 6       | Done   | [p6.py](p6.py) |
 | 7       | Done   | [p7.py](p7.py) |
 | 8       | Done   | [p8.py](p8.py) |
-| 9       | WIP    | [p9.py](p9.py) |
+| 9       | Done   | [p9.py](p9.py) |
