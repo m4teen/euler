@@ -17,5 +17,6 @@ along with clean and self-documenting solutions in code.
 | 4       | Done   | [p4.py](p4.py) |
 | 5       | Done   | [p5.py](p5.py) |
 | 6       | Done   | [p6.py](p6.py) |
-| 7       | WIP    | [p7.py](p7.py) |
+| 7       | Done   | [p7.py](p7.py) |
 | 8       | Done   | [p8.py](p8.py) |
+| 9       | WIP    | [p9.py](p9.py) |
