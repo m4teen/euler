@@ -2,7 +2,7 @@
 
 My solutions for [Project Euler](https://projecteuler.net/) – a
 collection of challenging mathematical and computational problems that
-require more than just mathematical insights to solve.
+require computer science and mathematical insights to solve.
 
 This repository contains my personal journey through the problems,
 along with clean and self-documenting solutions in code.
