@@ -1,6 +1,6 @@
 """
 
-prime_sieve(limit): Implements the classic Sieve of Eratosthenes to identify all prime numbers ≤ limit.
+prime_sieve(limit): Implements the classic Sieve of Eratosthenes to identify all prime numbers <= limit.
 prime_sum(limit): Uses prime_sieve to return the sum of all prime numbers <= limit.
 
 Time Complexity:
