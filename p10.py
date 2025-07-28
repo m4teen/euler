@@ -29,7 +29,7 @@ def prime_sum(limit):
     primes_mixed = prime_sieve(limit)                  # get prime flags
     primes = [i for i, j in enumerate(primes_mixed)    # extract prime numbers
               if j == True]
-    return sum(primes)  # return the sum of all primes ≤ limit
+    return sum(primes)  # return the sum of all primes <= limit
 
 
-print(prime_sum(2000000))  # prints the sum of all primes ≤ 2,000,000
+print(prime_sum(2000000))  # prints the sum of all primes <= 2,000,000
