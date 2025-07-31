@@ -3,8 +3,8 @@
 This function-th prime finds the n-th prime by checking successive odd numbers for primality using trial division 
 against all previously found primes. It starts from 2 and tests each candidate up to the desired count.
 
-Time complexity: O(n√p), where p is the n-th prime (since each number is tested against all prior primes)
-Space complexity: O(n), for storing the list of found primes
+Time complexity: O(n√p), where p is the n-th prime (since each number is tested against all prior primes).
+Space complexity: O(n), for storing the list of found primes.
 
 """
 
