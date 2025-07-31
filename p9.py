@@ -3,8 +3,8 @@
 The algorithm finds a Pythagorean triplet (a, b, c) such that a + b + c = n
 It then returns the product abc of the first such triplet found whose sum is exactly n.
 
-Time complexity: O(n^2) in the worst case due to the nested loops over a and b
-Space complexity: O(1) if returning a single triplet (or O(k) if collecting k solutions)
+Time complexity: O(n^2) in the worst case due to the nested loops over a and b.
+Space complexity: O(1) if returning a single triplet (or O(k) if collecting k solutions).
 """
 
 import math
