@@ -12,7 +12,7 @@ This solution tackles this problem by
 4. Returns the maximum product found.
 
 Time Complexity: O(N^2 * K^2) where N = size of the full matrix (20 here) and K = size of the 
-submatrix we are checking (4 here)
+submatrix we are checking (4 here).
 
 Space Complexity: O(1) extra space (only the matrix and a products list).
 
