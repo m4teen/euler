@@ -4,8 +4,8 @@ prime_sieve(limit): Implements the classic Sieve of Eratosthenes to identify all
 prime_sum(limit): Uses prime_sieve to return the sum of all prime numbers <= limit.
 
 Time Complexity:
-- prime_sieve: O(n log log n), where n = limit
-- prime_sum:    O(n), due to the linear scan to sum the primes
+- prime_sieve: O(n log log n), where n = limit.
+- prime_sum:    O(n), due to the linear scan to sum the primes.
 
 Space Complexity:
 - O(n) for storing the boolean array is_prime[0..limit]
