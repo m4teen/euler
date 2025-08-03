@@ -23,3 +23,4 @@ along with clean and self-documenting solutions in code.
 | 10      | Done   | [p10.py](p10.py)|
 | 11      | Done   | [p11.py](p11.py)|
 | 12      | Done   | [p12.py](p12.py)|
+| 13      | Done   | [p13.py](p13.py)|
