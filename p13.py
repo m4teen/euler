@@ -100,22 +100,41 @@ s = """37107287533902102798797998220837590246510135740250
 53503534226472524250874054075591789781264330331690
 """
 
+
+"""
+
+This solution first converts the number string into a matrix using nested lists, via the number_matrix function. 
+Then using counter it computes the first ten digits of the sum of all of these digits matrix by 
+performing column-wise addition from right to left, carrying residues from the addition across columns,
+before finally extracting the leading digits of the final sum.
+
+Time Complexity: O(n * d), where n is the number of rows and d is the number of digits per row.
+Space Complexity: O(d), for storing the digit-wise result and carry.
+
+"""
+
+
 def number_matrix(s):
     # Turn number string into a list of lists: 100 rows of 50 digits
     lines = s.strip().splitlines()
     return [[int(ch) for ch in line] for line in lines]
 
+
 def counter(m):
-    for i in range(len(m[0])-1,0, -1):
+    digits = []
+    residue = 0
+    for i in range(len(m[0])-1,-1, -1):
         # pass over the columns
-        digits = []
-        residue = 0
-        x = sum([m[j][i] for j in range(0,len(m)-1)]) + residue
+        x = sum([m[j][i] for j in range(0,len(m))]) + residue
         y = x % 10    # and get decimal part i.e the unit
         digits.append(y) # add that to the digits 
         residue = x//10   # residue now becomes the stuff not a unit which will be added to the next
-    
-    return digits[-10::]
+        
+    while residue > 0: # this is to make sure the residue thats built up over all the sums is actually added to the number
+        digits.append(residue % 10) # extract the least significant digit and append to the result
+        residue //= 10 # remove the extracted digit and continue with the rest of the carry
+
+    return list(reversed(digits))[:10]
 
 m = number_matrix(s)
-print(counter(m))
+print("".join(map(str, counter(m))))
