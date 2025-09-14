@@ -24,3 +24,6 @@ along with clean and self-documenting solutions in code.
 | 11      | Done   | [p11.py](p11.py)|
 | 12      | Done   | [p12.py](p12.py)|
 | 13      | Done   | [p13.py](p13.py)|
+| 14      | Done   | [p14.py](p14.py)|
+| 15      | WIP    |                 |
+| 16      | Done   | [p16.py](p16.py)|
