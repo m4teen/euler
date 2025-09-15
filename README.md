@@ -27,3 +27,4 @@ along with clean and self-documenting solutions in code.
 | 14      | Done   | [p14.py](p14.py)|
 | 15      | WIP    |                 |
 | 16      | Done   | [p16.py](p16.py)|
+| 17      | Done   | [p17.py](p17.py)|
