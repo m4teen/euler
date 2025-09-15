@@ -3,7 +3,7 @@ def o(m):
     Decompose integer m into its thousands, hundreds, tens, and units digits.
     Returns (string form, unit, ten, hundred, thousand).
     """
-    m = str().zfill(4)  # always 4 digits
+    m = str(m).zfill(4)  
     thou = int(m[0])
     hund = int(m[1])
     ten  = int(m[2])
@@ -35,7 +35,6 @@ def count(m, unit, ten, hund, thou):
     British usage: includes 'and' after hundreds where appropriate.
     """
     if thou != 0:
-        # only 1000 in our range → "onethousand"
         counter = 11
     else:
         if hund != 0:
@@ -53,7 +52,7 @@ def count(m, unit, ten, hund, thou):
             counter = 0
             tenu = ten * 10 + unit
             if tenu == 0:
-                counter = 4  # questionable branch, but left as-is
+                counter = 4  
             elif ten == 0:
                 counter += len(p(unit))
             elif tenu < 20:
